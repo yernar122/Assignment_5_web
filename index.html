@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 5: a personal profile using JavaScript objects, DOM manipulation and events.">
+  <title>My Profile | Assignment 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p class="subtitle">WEB TECHNOLOGIES · ASSIGNMENT 5</p>
+    <h1>My Profile</h1>
+    <p>A small page about me and my hobbies.</p>
+  </header>
+  <main>
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">01. Personal information</h2>
+      <dl>
+        <div><dt>Name</dt><dd id="profile-name"></dd></div>
+        <div><dt>Birth year</dt><dd id="profile-year"></dd></div>
+        <div><dt>Age (by year)</dt><dd id="profile-age"></dd></div>
+        <div><dt>Developer</dt><dd id="profile-developer"></dd></div>
+        <div><dt>Total hobbies</dt><dd id="hobby-count"></dd></div>
+      </dl>
+    </section>
+    <section aria-labelledby="edit-heading">
+      <h2 id="edit-heading">02. Update profile</h2>
+      <form id="profile-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Your name" maxlength="60" required>
+        <label for="birth-year">Birth Year</label>
+        <input id="birth-year" name="birthYear" type="number" placeholder="Your birth year" min="1900" step="1" required>
+        <button type="submit">Create / Update Profile</button>
+      </form>
+      <p id="profile-message" class="message" role="status"></p>
+    </section>
+    <section class="hobbies" aria-labelledby="hobbies-heading">
+      <h2 id="hobbies-heading">03. My hobbies</h2>
+      <ul id="hobby-list"></ul>
+      <form id="hobby-form">
+        <label for="new-hobby">New hobby</label>
+        <div class="controls">
+          <input id="new-hobby" name="hobby" type="text" placeholder="For example, Reading" maxlength="80" required>
+          <button type="submit">Add Item</button>
+          <button id="remove-item" class="secondary" type="button">Remove Item</button>
+        </div>
+      </form>
+      <p class="note">Remove Item deletes the last hobby from the list.</p>
+      <p id="hobby-message" class="message" role="status"></p>
+    </section>
+  </main>
+  <footer>Yernar Kuanyshbek · SE-2539 · JavaScript Basics</footer>
+</body>
+</html>

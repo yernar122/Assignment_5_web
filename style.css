@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  color: #252b36;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  width: min(900px, 92%);
+  margin: auto;
+}
+
+header {
+  padding: 35px 0 20px;
+}
+
+h1 {
+  margin: 5px 0;
+  font-size: 34px;
+}
+
+header > p:last-child {
+  margin-top: 5px;
+  color: #606775;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+section {
+  padding: 24px;
+  background: white;
+  border: 1px solid #dde1e8;
+  border-radius: 9px;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 19px;
+}
+
+.hobbies {
+  grid-column: 1 / -1;
+}
+
+dl {
+  margin: 0;
+}
+
+dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 7px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+dt {
+  color: #606775;
+}
+
+dd {
+  margin: 0;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b9c1ce;
+  border-radius: 5px;
+  font: inherit;
+  margin-bottom: 14px;
+}
+
+button {
+  padding: 11px 16px;
+  border: 1px solid #345eb6;
+  border-radius: 5px;
+  background: #345eb6;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #274a93;
+}
+
+button.secondary {
+  background: white;
+  color: #345eb6;
+}
+
+button.secondary:hover {
+  background: #eef3ff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #a7c2ff;
+  outline-offset: 2px;
+}
+
+.controls {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+.controls button {
+  white-space: nowrap;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  padding: 3px 0;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  color: #606775;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.message {
+  color: #246441;
+  font-size: 14px;
+  min-height: 21px;
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 22px 0;
+  color: #606775;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .controls input {
+    flex-basis: 100%;
+  }
+
+  section {
+    padding: 20px;
+  }
+}
